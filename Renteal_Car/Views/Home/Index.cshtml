@@ -1,0 +1,76 @@
+﻿@model Car
+
+@{
+    ViewData["Title"] = "Car Rental";
+}
+
+<style>
+    
+    body {
+        background-image: url("https://www.bmwusa.com/content/dam/bmw/common/vehicles/2023/my24/all-electric/i4/gran-coupe/electric-bmw-m/desktop/BMW-MY24-i4-M50-DP-FMA-Desktop.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        color: white;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    
+    .container {
+        padding: 20px;
+        opacity: 0.8;
+        position: relative;
+        z-index: 1; 
+    }
+
+   
+    .header {
+        background-color: rgba(0,0,0,1); 
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 50px; 
+    }
+
+    
+    .options-box {
+        background-color: rgba(0,0,0,1); 
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px; 
+    }
+
+
+    .option-btn {
+        margin-bottom: 10px; 
+    }
+</style>
+
+<div class="container">
+    <div class="header text-center">
+        <h1 class="display-4">Rental Car</h1>
+        <p class="lead">Find the perfect car for your journey</p>
+    </div>
+
+    <div class="options-box">
+        <h2 class="box-title text-center mb-4">What are you looking for?</h2>
+
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <a class="option-btn btn btn-outline-light btn-lg btn-block" asp-controller="Car" asp-action="SportCar">Sport Car</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a class="option-btn btn btn-outline-light btn-lg btn-block" asp-controller="Car" asp-action="SportCar">Luxury Car</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a class="option-btn btn btn-outline-light btn-lg btn-block" asp-controller="Car" asp-action="SportCar">Economy Car</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a class="option-btn btn btn-outline-light btn-lg btn-block" asp-controller="Car" asp-action="SportCar">SUV</a>
+            </div>
+            <div class="col-md-4 mb-3">
+                <a class="option-btn btn btn-outline-light btn-lg btn-block" asp-controller="Car" asp-action="SportCar">Van</a>
+            </div>
+        </div>
+    </div>
+</div>

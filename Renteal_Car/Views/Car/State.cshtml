@@ -1,0 +1,60 @@
+﻿@model Car
+@{
+    ViewData["Title"] = "State";
+}
+
+<style>
+   
+    body {
+        background-image: url("https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/Homepage-Cybertruck-Desktop.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+   
+    .container {
+        padding: 20px;
+    }
+
+    /* Style for the card */
+    .card {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the button */
+    .btn-back {
+        background-color: #007bff; /* Blue color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+        
+        .btn-back:hover {
+            background-color: #0056b3; 
+        }
+</style>
+
+<div class="container">
+    <h1 class="text-center mt-5">Car State</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <h3>Car Rental State:</h3>
+                <p>@Html.DisplayFor(model => model.RentalState)</p>
+            </div>
+            <a asp-action="Index" class="btn btn-back">Back</a>
+        </div>
+    </div>
+</div>
